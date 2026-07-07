@@ -7,10 +7,16 @@ class Solution {
         for(int num:nums){
             map.put(num,map.getOrDefault(num,0)+1);
         }
-       for (int key : map.keySet()) {
+     /*  for (int key : map.keySet()) {
     if (map.get(key) > majority) {
         return key;
     }
+}*/
+
+for(HashMap.Entry<Integer,Integer> val:map.entrySet()){
+    if(val.getValue()>majority){
+        return val.getKey();
+    } 
 }
 return -1;
     }
