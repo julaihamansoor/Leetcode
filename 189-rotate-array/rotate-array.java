@@ -6,7 +6,8 @@ class Solution {
 
         // Place each element at its rotated position
         for (int i = 0; i < n; i++) {
-            temp[(i + k) % n] = nums[i];
+            temp[(i + k) % n] = nums[i];  
+            // for each element of i -> i+k it is moving , to wrap up %n 
         }
 
         // Copy back to original array
